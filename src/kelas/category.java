@@ -4,7 +4,7 @@ import java.sql.Statement;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import javax.swing.JOptionPane;
+import javax.swing.JOptionPane; 
 
 public class category extends koneksi{
     private int categoryID;
@@ -33,7 +33,7 @@ public class category extends koneksi{
     
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
-    }
+    }   
     
     public void tambahCategory(){
         query = "insert into category values(?,?);";
@@ -90,8 +90,5 @@ public class category extends koneksi{
         }
         return rs;
     }
-    
-    public void reset(){
-        
-    }
+   
 }

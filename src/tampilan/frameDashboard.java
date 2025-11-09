@@ -62,6 +62,8 @@ public class frameDashboard extends javax.swing.JFrame {
         hamburger = new javax.swing.JLabel();
 
         menuLogout.setText("Logout");
+        menuLogout.setOpaque(true);
+        menuLogout.setPreferredSize(new java.awt.Dimension(90, 31));
         menuLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuLogoutActionPerformed(evt);

@@ -92,7 +92,8 @@ public void hapusProduct(){
     }
 }
 public void ubahProduct(){
-    query = "update product set productName=?, productCategory=?, productDescription=?, productPrice=? where productID=?;";
+    query = "update product set productName=?, productCategory=?, productDescription=?, "
+            + "productPrice=? where productID=?;";
     
     try {
         ps = koneksi.prepareStatement(query);
@@ -110,7 +111,8 @@ public void ubahProduct(){
 }
 
 public ResultSet TampilProduct(){
-    query = "select p.productID, p.productName, p.productCategory, c.categoryName, p.productDescription, p.productPrice from product p inner join category c on p.productCategory = c.categoryID;";
+    query = "select p.productID, p.productName, p.productCategory, c.categoryName, p.productDescription, "
+            + "p.productPrice from product p inner join category c on p.productCategory = c.categoryID;";
     
     try {
         st = koneksi.createStatement();
