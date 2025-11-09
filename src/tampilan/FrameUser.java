@@ -87,11 +87,11 @@ void reset(){
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblUser = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        bTambah = new javax.swing.JButton();
+        bUbah = new javax.swing.JButton();
         bHapus = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        bKembali = new javax.swing.JButton();
+        bReset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -178,23 +178,23 @@ void reset(){
         });
         jScrollPane1.setViewportView(tblUser);
 
-        jButton1.setBackground(new java.awt.Color(13, 110, 253));
-        jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Tambah");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        bTambah.setBackground(new java.awt.Color(13, 110, 253));
+        bTambah.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        bTambah.setForeground(new java.awt.Color(255, 255, 255));
+        bTambah.setText("Tambah");
+        bTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                bTambahActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 193, 7));
-        jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Ubah");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        bUbah.setBackground(new java.awt.Color(255, 193, 7));
+        bUbah.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        bUbah.setForeground(new java.awt.Color(255, 255, 255));
+        bUbah.setText("Ubah");
+        bUbah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                bUbahActionPerformed(evt);
             }
         });
 
@@ -208,16 +208,21 @@ void reset(){
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton4.setText("Kembali");
-
-        jButton5.setBackground(new java.awt.Color(108, 117, 125));
-        jButton5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Reset");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        bKembali.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        bKembali.setText("Kembali");
+        bKembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                bKembaliActionPerformed(evt);
+            }
+        });
+
+        bReset.setBackground(new java.awt.Color(108, 117, 125));
+        bReset.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        bReset.setForeground(new java.awt.Color(255, 255, 255));
+        bReset.setText("Reset");
+        bReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bResetActionPerformed(evt);
             }
         });
 
@@ -234,20 +239,20 @@ void reset(){
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(19, 19, 19)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(bTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(bUbah, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(bHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(bReset, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 652, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(16, 16, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -261,12 +266,12 @@ void reset(){
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bUbah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(bReset, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -274,7 +279,7 @@ void reset(){
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void bTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTambahActionPerformed
         user usr = new user();
         usr.setUserName(tUserName.getText());
         usr.setUserPassword(tPassword.getText());
@@ -287,7 +292,7 @@ void reset(){
         usr.setUserFullName(tFullName.getText());
         usr.tambahUser();
         load_table();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_bTambahActionPerformed
 
     private void bHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bHapusActionPerformed
         // TODO add your handling code here:
@@ -305,7 +310,7 @@ void reset(){
         }
     }//GEN-LAST:event_bHapusActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void bUbahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUbahActionPerformed
         // TODO add your handling code here:
         
        user usr = new user();
@@ -323,7 +328,7 @@ void reset(){
        load_table();
         reset();
        
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_bUbahActionPerformed
     
     private void tblUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblUserMouseClicked
         // TODO add your handling code here:
@@ -343,10 +348,16 @@ void reset(){
         
     }//GEN-LAST:event_tblUserMouseClicked
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void bResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bResetActionPerformed
         // TODO add your handling code here:\
         reset();
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_bResetActionPerformed
+
+    private void bKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bKembaliActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        
+    }//GEN-LAST:event_bKembaliActionPerformed
 
     /**
      * @param args the command line arguments
@@ -372,11 +383,11 @@ void reset(){
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bHapus;
+    private javax.swing.JButton bKembali;
+    private javax.swing.JButton bReset;
+    private javax.swing.JButton bTambah;
+    private javax.swing.JButton bUbah;
     private javax.swing.JComboBox<String> cStatus;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -200,7 +200,7 @@ bLogin.setBounds(centerX, buttonY, buttonWidth, buttonHeight);
        
        if(session.getStatus()=="aktif"){
            dispose();
-           new dashboard().setVisible(true);
+           new frameDashboard().setVisible(true);
            
        }else{
            return;

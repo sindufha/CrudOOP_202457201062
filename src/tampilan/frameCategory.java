@@ -134,6 +134,11 @@ public class frameCategory extends javax.swing.JFrame {
         bKembali.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         bKembali.setForeground(new java.awt.Color(73, 80, 87));
         bKembali.setText("Kembali");
+        bKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bKembaliActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -258,6 +263,10 @@ public class frameCategory extends javax.swing.JFrame {
     private void bResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bResetActionPerformed
         reset();        // TODO add your handling code here:
     }//GEN-LAST:event_bResetActionPerformed
+
+    private void bKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bKembaliActionPerformed
+        dispose();
+    }//GEN-LAST:event_bKembaliActionPerformed
 void loadTable() {
     DefaultTableModel model = new DefaultTableModel();
     model.addColumn("No");

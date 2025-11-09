@@ -20,12 +20,12 @@ import kelas.user;
  *
  * @author MyBook Hype AMD
  */
-public class dashboard extends javax.swing.JFrame {
+public class frameDashboard extends javax.swing.JFrame {
 
     /**
      * Creates new form dashboard
      */
-    public dashboard() {
+    public frameDashboard() {
         initComponents();
         tUsername.setText(session.getUsername());
         tEmail.setText(session.getEmail());
@@ -104,6 +104,7 @@ public class dashboard extends javax.swing.JFrame {
         bKategori.setForeground(new java.awt.Color(255, 255, 255));
         bKategori.setText("Kategori");
         bKategori.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        bKategori.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bKategori.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bKategoriActionPerformed(evt);
@@ -115,12 +116,24 @@ public class dashboard extends javax.swing.JFrame {
         bUser.setForeground(new java.awt.Color(255, 255, 255));
         bUser.setText("User");
         bUser.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        bUser.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bUserActionPerformed(evt);
+            }
+        });
 
         bProduk.setBackground(new java.awt.Color(102, 153, 255));
         bProduk.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         bProduk.setForeground(new java.awt.Color(255, 255, 255));
         bProduk.setText("Produk");
         bProduk.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        bProduk.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bProduk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bProdukActionPerformed(evt);
+            }
+        });
 
         hamburger.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-hamburger-45.png"))); // NOI18N
         hamburger.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -135,10 +148,10 @@ public class dashboard extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addComponent(bKategori, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(0, 0, 0)
                 .addComponent(bProduk, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(bUser, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(bUser, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(755, 755, 755)
                 .addComponent(hamburger)
                 .addGap(12, 12, 12))
@@ -212,7 +225,7 @@ public class dashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bKategoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bKategoriActionPerformed
-        
+        new frameCategory().setVisible(true);
     }//GEN-LAST:event_bKategoriActionPerformed
 
     private void hamburgerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hamburgerMouseClicked
@@ -220,8 +233,29 @@ jPopupMenu1.show(hamburger, 0, hamburger.getHeight());
     }//GEN-LAST:event_hamburgerMouseClicked
 
     private void menuLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuLogoutActionPerformed
-        System.exit(0);
+        int pilihan = JOptionPane.showConfirmDialog(
+    null,
+    "Apakah kamu yakin ingin keluar?",
+    "Konfirmasi Keluar",
+    JOptionPane.YES_NO_OPTION,
+    JOptionPane.QUESTION_MESSAGE
+);
+
+if (pilihan == JOptionPane.YES_OPTION) {
+    System.exit(0); 
+} else if (pilihan == JOptionPane.NO_OPTION) {
+    return;
+}
+
     }//GEN-LAST:event_menuLogoutActionPerformed
+
+    private void bProdukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProdukActionPerformed
+        new frameProduct().setVisible(true);
+    }//GEN-LAST:event_bProdukActionPerformed
+
+    private void bUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUserActionPerformed
+      new FrameUser().setVisible(true);
+    }//GEN-LAST:event_bUserActionPerformed
       
     /**
      * @param args the command line arguments
@@ -239,7 +273,7 @@ jPopupMenu1.show(hamburger, 0, hamburger.getHeight());
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new dashboard().setVisible(true);
+                new frameDashboard().setVisible(true);
             }
         });
     }

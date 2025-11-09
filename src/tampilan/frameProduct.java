@@ -209,6 +209,11 @@ private void loadComboBox(){
 
         bKembali.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         bKembali.setText("Kembali");
+        bKembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bKembaliActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -369,6 +374,10 @@ private void loadComboBox(){
     private void bResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bResetActionPerformed
         reset();
     }//GEN-LAST:event_bResetActionPerformed
+
+    private void bKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bKembaliActionPerformed
+        dispose();
+    }//GEN-LAST:event_bKembaliActionPerformed
 
     /**
      * @param args the command line arguments
